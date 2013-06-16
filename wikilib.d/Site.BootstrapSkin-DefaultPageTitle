@@ -1,2 +1,2 @@
 version=pmwiki-2.2.43 ordered=1 urlencoded=1
-text=>>page-header%3c%3c%0a! [[{*$Group}/|{*$Groupspaced}]] / [[{*$FullName} | {*$Name}]] %25subtitle%25{*$:Summary}%25%25%0a>>%3c%3c%0a
+text=>>page-header%3c%3c%0a! [[{*$Group}/|{*$Groupspaced}]] / [[{*$FullName} | {*$Title}]] %25subtitle%25{*$:Summary}%25%25%0a>>%3c%3c%0a
