@@ -1,0 +1,21 @@
+version=pmwiki-2.2.43 ordered=1 urlencoded=1
+agent=Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:15.0) Gecko/20100101 Firefox/15.0.1
+author=tamouse
+charset=ISO-8859-1
+csum=
+ctime=1348123913
+host=127.0.0.1
+name=Site.MouseSkin-SideBar
+rev=3
+targets=
+text=(:include {$Group}.SideBar {$DefaultGroup}.SideBar {$SiteGroup}.SideBar :)
+time=1348123929
+author:1348123929=tamouse
+diff:1348123929:1348123923:=
+host:1348123929=127.0.0.1
+author:1348123923=tamouse
+diff:1348123923:1348123913:=
+host:1348123923=127.0.0.1
+author:1348123913=tamouse
+diff:1348123913:1348123913:=1d0%0a%3c (:include {$Group}.SideBar {$DefaultGroup}.SideBar {$SiteGroup}.SideBar :)%0a\ No newline at end of file%0a
+host:1348123913=127.0.0.1

@@ -1,0 +1,105 @@
+/*
+ * skin.css -- css code for mouse-skin pmwiki skin
+ *
+ * Author: Tamara Temple <tamara@tamaratemple.com>
+ * Created: 2012-09-14
+ * Time-stamp: <2012-09-20 02:40:26 tamara>
+ * Version: 2012-09-14
+ * Copyright (c) 2012 Tamara Temple Web Development
+ * License: CC BY-NC-AT
+ */
+
+@import "fonts.css";
+body { font-size: 1em; margin:0;padding:0;}
+header { border-bottom: 3px solid #999; }
+.sitetitle { font-weight:bold; font-size: 150%; }
+.sitetitle a { color: black; }
+.sitetag { font-style:italic; font-size: 120% }
+.siteactions { display:block;float:right; text-align:right; }
+.siteactions ul { list-style:none; margin:0;padding:0; }
+.siteactions ul li { display:inline; margin: 0 3px; }
+#pageactionscontainer {wrap:none;min-width:20%;position:fixed;top:0;right:0; }
+#pageactions { font-size:85%; display:block; text-align:right; color:#ddd; background-color:#222;}
+#pageactions a { color:#dd0; text-decoration:none; }
+#pageactions a:hover { color:#dd0; text-decoration:underline; }
+#pageactions a:visited { color:#dd6; text-decoration:none; }
+#pageactions a:active { color:#dd6; text-decoration:none; }
+#pageactions ul { list-style:none; margin:0;padding:0; }
+#pageactions ul li { display: inline; margin: 0px 3px; }
+
+aside { font-size: 90%; position: fixed; top: 0; left: 0; display:block; max-width: 20%; height: 98%; overflow-y:auto; } /* sidebar */
+
+footer {clear:both;margin-top:20px;border-top: 3px solid #999;}
+
+.clearboth {clear:both;}
+
+article { margin-left: 20%; display:block; padding:20px;} /* make room for the sidebar */
+.articletitle { font-size:120%;font-weight:bold;border-bottom:1px solid #999; }
+.articlesummary { font-weight:bold;font-style:italic; margin-bottom:3px; }
+h1 {font-size: 150%;border-top: 1px solid #999;border-bottom: 1px solid #999;margin-top: 3px; margin-bottom: 3px;}
+h2 {font-size: 130%;border-bottom: 1px solid #999;}
+h3 {font-size: 100%;}
+dt {font-weight:bold;}
+a { text-decoration:none; }
+a:hover {text-decoration:underline;}
+
+div.toc {border:1px solid black;
+  background: -webkit-linear-gradient(left,#DDD,white);
+  background: -moz-linear-gradient(left,#DDD,white);
+  background: -o-linear-gradient(left,#DDD,white);
+  background: linear-gradient(left,#DDD,white);
+}
+div.toc p { padding: 5px; }
+div.toc li { padding-right: 5px; }
+
+#wikiedit form { margin:0px; width:100%; }
+#wikiedit textarea { width:100%; }
+
+.smaller { font-size:80%; }
+.wikimessage { margin-top:4px; margin-bottom:4px; font-style:italic; }
+.tags { display: inline; }
+.listtag {padding-left:1px;padding-right:1px;}
+.sidehead {margin-left:0;margin-bottom:0;margin-top:3px;text-transform:uppercase;font-size: 110%;border-bottom: 1px solid #999;}
+.note {
+	display:block;
+	border: 1px solid #093;
+	width: 50%;
+	margin: 20px auto;
+	padding: 2px 2px 2px 20px;
+	background-image: url('images/sign_tick.png');
+	background-position: center left;
+	background-repeat: no-repeat;
+}
+.important {
+	display:block;
+	border: 1px solid #960;
+	width: 50%;
+	margin: 20px auto;
+	padding: 2px 2px 2px 20px;
+	background-image: url('images/sign_explain.png');
+	background-position: center left;
+	background-repeat: no-repeat;
+	
+}
+.audience {
+	display: block;
+	float: right;
+	border: 1px solid #999;
+
+	font-size:90%;
+	width: 20%;
+	padding: 5px;
+	margin: 5px;
+}
+.audience ul {
+	margin-left:10px;
+	margin-right:0px;
+	margin-top:0px;
+	morgin-bottom:0px;
+	padding:0px;
+}
+.audience ul li {
+	margin:0px;
+	padding:0px;
+}
+.webdings {font-family:webdings}
