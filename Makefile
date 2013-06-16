@@ -4,4 +4,4 @@ OBJECTS=.gitignore Makefile README.md bootstrap.css bootstrap.php bootstrap.tmpl
 dist: ../bootstrap-skin.zip
 
 ../bootstrap-skin.zip: $(OBJECTS)
-	git archive --format zip --prefix bootstrap-skin/ --output ../bootstrap-skin.zip HEAD
+	git archive --format zip --prefix bootstrap/ --output ../bootstrap-skin.zip HEAD
