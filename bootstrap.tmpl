@@ -1,4 +1,4 @@
-<!DOCTYPE html><!-- -*- html -*- Time-stamp: <2013-06-16 07:28:26 tamara> 
+<!DOCTYPE html><!-- -*- html -*- Time-stamp: <2013-06-16 08:41:49 tamara> 
 bootstrap.tmpl - pmwiki skin template for BootstrapSkin
 
 @author Tamara Temple <tamara@tamaratemple.com>
@@ -12,6 +12,24 @@ bootstrap.tmpl - pmwiki skin template for BootstrapSkin
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <script src="//code.jquery.com/jquery-1.10.0.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <style type="text/css">
+      body {
+      padding-top: 120px;
+      padding-bottom: 10px;
+      }
+      .sidebar-nav {
+      padding: 9px 0;
+      }
+      
+      @media (max-width: 980px) {
+      /* Enable use of floated navbar text */
+      .navbar-text.pull-right {
+      float: none;
+      padding-left: 5px;
+      padding-right: 5px;
+      }
+      }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Fav and touch icons -->
     <!-- Don't have these yet
@@ -33,7 +51,13 @@ bootstrap.tmpl - pmwiki skin template for BootstrapSkin
 	  <a class="brand" href="$ScriptUrl"><img src="$PageLogoUrl"></a>
 	  <a class="brand" href="$ScriptUrl">$WikiTitle</a>
 	  <div class="nav-collapse collapse">
-	    <p class="navbar-text pull-rightnavbar">(searchbox)</p>
+	    <form action='{$ScriptUrl}' class="form-search pull-right">
+	      <input type='hidden' name='n' value='{$FullName}'>
+	      <input type='hidden' name='action' value='search'>
+	      <a href='{$ScriptUrl}/$[{$SiteGroup}/Search]'>$[Search]</a>:
+	      <input type='text' name='q' value='' class='input-medium search-query'>
+	      <button type='submit' class='btn'>$[Go]</button></form>
+	  
             <ul class="nav">
               <li><a href="$ScriptUrl">Home</a></li>
 	      <li><a href="/$SiteGroup/About">About</a></li>
@@ -44,16 +68,19 @@ bootstrap.tmpl - pmwiki skin template for BootstrapSkin
             </ul>
 	  </div><!--/.nav-collapse -->
 	</div>
+	<div class="container-fluid">
+	  <div class="nav-collapse collapse">
+	    <!--PageActionsFmt-->
+	    <!--wiki:$SiteGroup.BootstrapSkin-PageActions-->
+	    <!--/PageActionsFmt-->
+	  </div>
+	</div>
       </div>
     </div>
 
     <div class="row-fluid">
       <div class="span3">
         <div class="well sidebar-nav">
-	  <!--PageActionsFmt-->
-	  <!--wiki:$SiteGroup.BootstrapSkin-PageActions-->
-	  <!--/PageActionsFmt-->
-
 	  <!--PageLeftFmt-->
 	  <!--wiki:$SiteGroup.BootstrapSkin-SideBar-->
 	  <!--/PageLeftFmt-->
@@ -68,7 +95,7 @@ bootstrap.tmpl - pmwiki skin template for BootstrapSkin
 
     <hr>
 
-    <footer>
+    <footer class="well">
       <!--PageFooterFmt-->
       <!--wiki:$SiteGroup.BootstrapSkin-SiteFooter-->
       <!--/PageFooterFmt-->
