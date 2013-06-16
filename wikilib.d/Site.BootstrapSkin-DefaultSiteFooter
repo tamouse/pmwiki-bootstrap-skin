@@ -1,0 +1,2 @@
+version=pmwiki-2.2.43 ordered=1 urlencoded=1
+text=[[%3c%3c]]%0a>>smaller%3c%3c%0a(:linebreaks:)%0aPage last modified {*$LastModified} by {*$LastModifiedBy}.%0aPowered by [[PmWiki:PmWiki|PmWiki {$Version}]]. [[Site/BootstrapSkin]] by [[http://wiki.tamaratemple.com/Profiles/Tamara|Tamara Temple]].%0a

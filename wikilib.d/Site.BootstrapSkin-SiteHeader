@@ -1,24 +1,2 @@
 version=pmwiki-2.2.43 ordered=1 urlencoded=1
-agent=Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:15.0) Gecko/20100101 Firefox/15.0.1
-author=tamouse
-charset=ISO-8859-1
-csum=
-ctime=1348125067
-host=127.0.0.1
-name=Site.MouseSkin-SiteHeader
-rev=4
-targets=Main.HomePage,Site.About,Site.GroupList,Category.Category,Site.AllRecentChanges
-text=>>display=inline-block width=49pct%3c%3c%0a%25lfloat%25[[{$DefaultGroup}/|{$PageLogoUrl}]]%0a(:linebreaks:)%0a%25sitetitle%25 [[{$DefaultGroup}/|{$WikiTitle}]]%0a%25sitetag%25 {$WikiTag}%0a(:nolinebreaks:)%0a>>siteactions display=inline-block width=49pct%3c%3c%0a* [[{$DefaultGroup}|Home]]%0a* [[{$SiteGroup}.About|About]]%0a* [[{$SiteGroup}.GroupList|Topics]]%0a* [[Category/|Categories]]%0a* [[{$SiteGroup}.AllRecentChanges|Recent Changes]]%0a* [[{$SiteGroup}.AllRecentChanges?action=rss|RSS]]%0a(:searchbox size=20:)%0a>>%3c%3c%0a[[%3c%3c]]%0a(:include {$SiteGroup}.SiteNews:)%0a[[%3c%3c]]%0a
-time=1348125405
-author:1348125405=tamouse
-diff:1348125405:1348125379:=
-host:1348125405=127.0.0.1
-author:1348125379=tamouse
-diff:1348125379:1348125273:=1d0%0a%3c >>display=inline-block width=49pct%3c%3c%0a7c6%0a%3c >>siteactions display=inline-block width=49pct%3c%3c%0a---%0a> >>siteactions float=right%3c%3c%0a
-host:1348125379=127.0.0.1
-author:1348125273=tamouse
-diff:1348125273:1348125067:=0a1%0a> >>lfloat%3c%3c%0a
-host:1348125273=127.0.0.1
-author:1348125067=tamouse
-diff:1348125067:1348125067:=1,18d0%0a%3c >>lfloat%3c%3c%0a%3c %25lfloat%25[[{$DefaultGroup}/|{$PageLogoUrl}]]%0a%3c (:linebreaks:)%0a%3c %25sitetitle%25 [[{$DefaultGroup}/|{$WikiTitle}]]%0a%3c %25sitetag%25 {$WikiTag}%0a%3c (:nolinebreaks:)%0a%3c >>siteactions float=right%3c%3c%0a%3c * [[{$DefaultGroup}|Home]]%0a%3c * [[{$SiteGroup}.About|About]]%0a%3c * [[{$SiteGroup}.GroupList|Topics]]%0a%3c * [[Category/|Categories]]%0a%3c * [[{$SiteGroup}.AllRecentChanges|Recent Changes]]%0a%3c * [[{$SiteGroup}.AllRecentChanges?action=rss|RSS]]%0a%3c (:searchbox size=20:)%0a%3c >>%3c%3c%0a%3c [[%3c%3c]]%0a%3c (:include {$SiteGroup}.SiteNews:)%0a%3c [[%3c%3c]]%0a
-host:1348125067=127.0.0.1
+text=(:include {$SiteGroup}.BootstrapSkin-DefaultSiteHeader :)(:nl:)(:comment Only the default site header is included here as it uses bootstrap styles. Refer to this page before including your own site header.:)

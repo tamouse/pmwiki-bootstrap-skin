@@ -1,0 +1,2 @@
+version=pmwiki-2.2.43 ordered=1 urlencoded=1
+text=* %25list class=nav%25 [[{$DefaultGroup}                          | $[Home]                 ]]%0a*                  [[Category/                                | $[Categories]           ]]%0a*                  [[{$SiteGroup}.AllRecentChanges            | $[Recent Changes]       ]]%0a*                  [[{$SiteGroup}.AllRecentChanges?action=rss | $[RSS]                  ]]%0a

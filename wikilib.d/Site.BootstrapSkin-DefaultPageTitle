@@ -1,0 +1,2 @@
+version=pmwiki-2.2.43 ordered=1 urlencoded=1
+text=! [[{*$Group}/|{*$Groupspaced}]] / [[{$FullName} | {*$Name}]]%0a'''''{*$:Summary}'''''%0a[[%3c%3c]]%0a
