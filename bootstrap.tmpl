@@ -1,50 +1,81 @@
-<!DOCTYPE html><!-- -*- html -*- Time-stamp: <2012-09-20 01:49:55 tamara> 
-    mouse.tmpl - pmwiki skin template for MouseSkin
+<!DOCTYPE html><!-- -*- html -*- Time-stamp: <2013-06-16 07:28:26 tamara> 
+bootstrap.tmpl - pmwiki skin template for BootstrapSkin
 
-    @author Tamara Temple <tamara@tamaratemple.com>
-    @version 2012-09-20
-    @copyright &copy; (c) © Tamara Temple Web Development
-    @license GPLv3
---><html>
-<head>
-  <title>$WikiTitle &raquo; $Groupspaced &mdash; $Titlespaced</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <!--HTMLHeader-->
-  <link rel="stylesheet" href="$SkinDirUrl/mouse.css" type="text/css" charset="utf-8" />
-  <!--[if IE]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-      <![endif]-->
-</head>
-<body class='$SkinColor'>
-<article>
-<header>
-<!--PageHeaderFmt-->
-<!--wiki:$SiteGroup.MouseSkin-SiteHeader-->
-<!--/PageHeaderFmt-->
-</header>
-<section>
-  <!--PageTitleFmt-->
-  <!--wiki:$SiteGroup.MouseSkin-PageTitle-->
-  <!--PageText-->
-</section>
-<footer>
-  <!--PageFooterFmt-->
-  <!--wiki:$SiteGroup.MouseSkin-SiteFooter-->
-  <!--/PageFooterFmt-->
-</footer>
-<div id="pageactionscontainer">
-  <nav id="pageactions">
-    <!--PageActionsFmt-->
-    <!--wiki:$SiteGroup.MouseSkin-PageActions-->
-    <!--/PageActionsFmt-->
-  </nav>
-</div>
-</article>
-<aside>
-<!--PageLeftFmt-->
-<!--wiki:$SiteGroup.MouseSkin-SideBar-->
-<!--/PageLeftFmt-->
-</aside>
+@author Tamara Temple <tamara@tamaratemple.com>
+@version 2013-06-16
+@copyright &copy; (c) 2013 Tamara Temple Web Development
+@license GPLv3 -->
+<html>
+  <head>
+    <title>$WikiTitle &raquo; $Groupspaced &mdash; $Titlespaced</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fav and touch icons -->
+    <!-- Don't have these yet
+	 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="$SkinDirUrl/assets/ico/apple-touch-icon-144-precomposed.png">
+	 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="$SkinDirUrl/assets/ico/apple-touch-icon-114-precomposed.png">
+	 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="$SkinDirUrl/assets/ico/apple-touch-icon-72-precomposed.png">
+         <link rel="apple-touch-icon-precomposed" href="$SkinDirUrl/assets/ico/apple-touch-icon-57-precomposed.png">
+         <link rel="shortcut icon" href="$SkinDirUrl/assets/ico/favicon.png">
+	 -->
+    <!--HTMLHeader-->
+    <!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container-fluid">
+	  <a class="brand" href="$ScriptUrl"><img src="$PageLogoUrl"></a>
+	  <a class="brand" href="$ScriptUrl">$WikiTitle</a>
+	  <div class="nav-collapse collapse">
+	    <p class="navbar-text pull-rightnavbar">(searchbox)</p>
+            <ul class="nav">
+              <li><a href="$ScriptUrl">Home</a></li>
+	      <li><a href="/$SiteGroup/About">About</a></li>
+	      <li><a href="/$SiteGroup/GroupList">Topics</a></li>
+	      <li><a href="/Category">Categories</a></li>
+	      <li><a href="/$SiteGroup/AllRecentChanges">Recent Changes</a></li>
+	      <li><a href="/$SiteGroup/AllRecentChanges?acction=rss">RSS</a></li>
+            </ul>
+	  </div><!--/.nav-collapse -->
+	</div>
+      </div>
+    </div>
+
+    <div class="row-fluid">
+      <div class="span3">
+        <div class="well sidebar-nav">
+	  <!--PageActionsFmt-->
+	  <!--wiki:$SiteGroup.BootstrapSkin-PageActions-->
+	  <!--/PageActionsFmt-->
+
+	  <!--PageLeftFmt-->
+	  <!--wiki:$SiteGroup.BootstrapSkin-SideBar-->
+	  <!--/PageLeftFmt-->
+        </div><!--/.well -->
+      </div><!--/span-->
+      <div class="span9">
+	<!--PageTitleFmt-->
+	<!--wiki:$SiteGroup.BootstrapSkin-PageTitle-->
+	<!--PageText-->
+      </div><!--/span-->
+    </div><!--/row-->
+
+    <hr>
+
+    <footer>
+      <!--PageFooterFmt-->
+      <!--wiki:$SiteGroup.BootstrapSkin-SiteFooter-->
+      <!--/PageFooterFmt-->
+    </footer>
+
+</div><!--/.fluid-container-->
+
 <!--HTMLFooter-->
 </body>
 </html>
