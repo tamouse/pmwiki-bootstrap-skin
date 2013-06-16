@@ -3,13 +3,15 @@
  *
  * Author: Tamara Temple <tamara@tamaratemple.com>
  * Created: 2012-09-14
- * Time-stamp: <2013-06-16 11:07:09 tamara>
+ * Time-stamp: <2013-06-16 12:32:23 tamara>
  * Version: 2012-09-14
  * Copyright (c) 2012 Tamara Temple Web Development
  * License: CC BY-NC-AT
  */
 
 .nav > li > a.createlink { display:none; }
+
+textarea { width: 100%; } /* override ridiculously small bootstrap setting */
 
 #wikiedit form { margin:0px; width:100%; }
 #wikiedit textarea { width:100%; }
