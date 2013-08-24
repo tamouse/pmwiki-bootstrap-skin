@@ -5,7 +5,7 @@
  *
  * @author Tamara Temple <tamara@tamaratemple.com>
  * @since 2012-09-15
- * @version <2013-Aug-24 15:38>
+ * @version <2013-Aug-24 15:41>
  * @copyright (c) 2012 Tamara Temple Web Development
  * @license GPLv3
  *
@@ -67,7 +67,7 @@ Markup("bthumbend","inline",'/\\(:bthumbend:\\)/',
 
    where title is the setting for the dropdown group.
  */
-Markup("bgroups","inline","/\\(:bgroupdropdown\s*(.*?)\s*:\\)/",
+Markup("bgroups",">links","/\\(:bgroupdropdown\s*(.*?)\s*:\\)/",
        "GroupDropdownMenu('$1')");
 
 function GroupDropdownMenu($args) {
