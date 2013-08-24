@@ -5,7 +5,7 @@
  *
  * @author Tamara Temple <tamara@tamaratemple.com>
  * @since 2012-09-15
- * @version <2013-Aug-24 16:27>
+ * @version <2013-Aug-24 16:29>
  * @copyright (c) 2012 Tamara Temple Web Development
  * @license GPLv3
  *
@@ -99,9 +99,9 @@ function GetListOfWikiGroups() {
 
 function BuildGroupList($grouplist) {
     $out = '';
-    foreach($grouplist as $group) {
+    foreach($grouplist as $grouppage) {
         $out .= '<li>';
-        $out .= MakeLink($pagename,$group.'.');
+        $out .= MakeLink($pagename,$grouppage);
         $out .= '</li>';
     }
     return $out;
