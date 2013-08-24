@@ -48,3 +48,13 @@ if (!in_array($SkinColor,$AvailableSkinColors)) {
   error_log(sprintf("[PmWiki] user error in file %s at line %s: Unknown skin color: %s\n",(basename(__FILE__)),__LINE__,$SkinColor));
   $SkinColor = $DefaultSkinColor;
 }
+
+// Thumbnails elements
+Markup("b-thumbnails", "inline", '/\\(:b-thumbnails:\\)/',
+  Keep('<ul class="thumbnails">'));
+Markup("b-thumbnailsend", "inline", '/\\(:b-thumbnails:\\)/',
+  Keep('</ul>'));
+Markup("b-thumb","inline",'/\\(:b-thumb (\\d+):\\)/e',
+  Keep('<li class="span$1"><div class="thumbnail">'));
+Markup("b-thumbend","inline",'/\\(:b-thumbend:\\)/',
+  Keep('</div></li>'));
