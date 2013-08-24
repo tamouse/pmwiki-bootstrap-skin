@@ -50,11 +50,11 @@ if (!in_array($SkinColor,$AvailableSkinColors)) {
 }
 
 // Thumbnails elements
-Markup("b-thumbnails", "inline", '/\\(:b-thumbnails:\\)/',
+Markup("bthumbnails", "inline", '/\\(:bthumbnails:\\)/',
   Keep('<ul class="thumbnails">'));
-Markup("b-thumbnailsend", "inline", '/\\(:b-thumbnails:\\)/',
+Markup("bthumbnailsend", "inline", '/\\(:bthumbnails:\\)/',
   Keep('</ul>'));
-Markup("b-thumb","inline",'/\\(:b-thumb (\\d+):\\)/e',
+Markup("bthumb","inline",'/\\(:bthumb:\\)/',
   Keep('<li class="span2"><div class="thumbnail">'));
-Markup("b-thumbend","inline",'/\\(:b-thumbend:\\)/',
+Markup("bthumbend","inline",'/\\(:bthumbend:\\)/',
   Keep('</div></li>'));
