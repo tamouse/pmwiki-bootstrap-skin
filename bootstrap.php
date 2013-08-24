@@ -52,7 +52,7 @@ if (!in_array($SkinColor,$AvailableSkinColors)) {
 // Thumbnails elements
 Markup("bthumbnails", "inline", '/\\(:bthumbnails:\\)/',
   Keep('<ul class="thumbnails">'));
-Markup("bthumbnailsend", "inline", '/\\(:bthumbnails:\\)/',
+Markup("bthumbnailsend", "inline", '/\\(:bthumbnailsend:\\)/',
   Keep('</ul>'));
 Markup("bthumb","inline",'/\\(:bthumb:\\)/',
   Keep('<li class="span2"><div class="thumbnail">'));
