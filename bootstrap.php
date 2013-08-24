@@ -5,7 +5,7 @@
  *
  * @author Tamara Temple <tamara@tamaratemple.com>
  * @since 2012-09-15
- * @version <2013-Aug-24 15:31>
+ * @version <2013-Aug-24 15:38>
  * @copyright (c) 2012 Tamara Temple Web Development
  * @license GPLv3
  *
@@ -68,7 +68,7 @@ Markup("bthumbend","inline",'/\\(:bthumbend:\\)/',
    where title is the setting for the dropdown group.
  */
 Markup("bgroups","inline","/\\(:bgroupdropdown\s*(.*?)\s*:\\)/",
-       Keep('GroupDropdownMenu($1)'));
+       "GroupDropdownMenu('$1')");
 
 function GroupDropdownMenu($args) {
     $args = ParseArgs($args);   /* get them in a form we can use */
@@ -79,6 +79,8 @@ function GroupDropdownMenu($args) {
      * working directory */
 
     $group_list = GetListOfWikiGroups();
+    $formatted_list = BuildGroupList($group_list);
+    return Keep($formatted_list);
 }
 
 function GetListOfWikiGroups() {
