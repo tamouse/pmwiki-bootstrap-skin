@@ -55,6 +55,6 @@ Markup("b-thumbnails", "inline", '/\\(:b-thumbnails:\\)/',
 Markup("b-thumbnailsend", "inline", '/\\(:b-thumbnails:\\)/',
   Keep('</ul>'));
 Markup("b-thumb","inline",'/\\(:b-thumb (\\d+):\\)/e',
-  Keep('<li class="span$1"><div class="thumbnail">'));
+  Keep('<li class="span2"><div class="thumbnail">'));
 Markup("b-thumbend","inline",'/\\(:b-thumbend:\\)/',
   Keep('</div></li>'));
