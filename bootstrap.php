@@ -67,7 +67,7 @@ Markup("bthumbend","inline",'/\\(:bthumbend:\\)/',
 
    where title is the setting for the dropdown group.
  */
-Markup("bgroups",">links","/\\(:bgroupdropdown\s*(.*?)\s*:\\)/",
+Markup("bgroups",">links","/\\(:bgroupdropdown\s*(.*?)\s*:\\)/e",
        "GroupDropdownMenu('$1')");
 
 function GroupDropdownMenu($args) {
