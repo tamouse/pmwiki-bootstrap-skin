@@ -5,7 +5,7 @@
  *
  * @author Tamara Temple <tamara@tamaratemple.com>
  * @since 2012-09-15
- * @version <2013-Aug-24 16:29>
+ * @version <2013-Aug-24 16:30>
  * @copyright (c) 2012 Tamara Temple Web Development
  * @license GPLv3
  *
@@ -84,7 +84,7 @@ function GroupDropdownMenu($args) {
 }
 
 function GetListOfWikiGroups() {
-    $pagelist = ListPages('*.RecentChanges');
+    $pagelist = sort(ListPages('*.RecentChanges'));
     $grouplist = array();
     foreach($pagelist as $page) {
         list ($group, $name) = explode('.',$page);
