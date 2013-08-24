@@ -54,7 +54,11 @@ Markup("bthumbnails", "inline", '/\\(:bthumbnails:\\)/',
   Keep('<ul class="thumbnails">'));
 Markup("bthumbnailsend", "inline", '/\\(:bthumbnailsend:\\)/',
   Keep('</ul>'));
-Markup("bthumb","inline",'/\\(:bthumb:\\)/',
-  Keep('<li class="span2"><div class="thumbnail">'));
+
+// workaround for having /e in regex:
+$thumb_re = '/\\(:bthumb (\\d+):\\)/e';
+
+Markup("bthumb","inline",$thumb_re,
+  Keep('<li class="span$1"><div class="thumbnail">'));
 Markup("bthumbend","inline",'/\\(:bthumbend:\\)/',
   Keep('</div></li>'));
