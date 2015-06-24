@@ -5,7 +5,7 @@
  *
  * @author Tamara Temple <tamara@tamaratemple.com>
  * @since 2012-09-15
- * @version <2013-Aug-24 16:52>
+ * @version <2013-Aug-24 17:03>
  * @copyright (c) 2012 Tamara Temple Web Development
  * @license GPLv3
  *
@@ -108,6 +108,9 @@ function BuildGroupList($grouplist) {
     return $out;
 }
 
+/* The following isn't working the way I want it to. Instead of
+ * putting the pagelist inside this, it's outside, so the group
+ * dropdowns don't work. */
 Markup("bgroupbegin",">links","/\\(:bgroupbegin (\\w+):\\)/e",
        "Keep('<li class=\"dropdown\"><a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">$1<b class=\"caret\"></b></a><ul class=\"dropdown-menu\">')");
 Markup("bgroupend",">links","/\\(:bgroupend:\\)/",
