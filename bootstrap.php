@@ -5,7 +5,7 @@
  *
  * @author Tamara Temple <tamara@tamaratemple.com>
  * @since 2012-09-15
- * @version <2012-Sep-20 02:12>
+ * @version <2013-Aug-24 17:03>
  * @copyright (c) 2012 Tamara Temple Web Development
  * @license GPLv3
  *
@@ -58,3 +58,60 @@ Markup("bthumb","inline",'/\\(:bthumb (\\d+):\\)/e',
   "Keep('<li class=\"span$1\"><div class=\"thumbnail\">')");
 Markup("bthumbend","inline",'/\\(:bthumbend:\\)/',
   Keep('</div></li>'));
+
+/* Dropdowns
+   
+   Used in menu sections (navbar, etc). To use, insert:
+
+       (:bgroups title="Groups":)
+
+   where title is the setting for the dropdown group.
+ */
+Markup("bgroups",">links","/\\(:bgroupdropdown\s*(.*?)\s*:\\)/e",
+       "GroupDropdownMenu('$1')");
+
+function GroupDropdownMenu($args) {
+    $args = ParseArgs($args);   /* get them in a form we can use */
+    $inline_code_begin="<li class=\"dropdown\"><a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">".$args['title']."<b class=\"caret\"></b></a><ul class=\"dropdown-menu\">";
+    $inline_code_end="</ul></li>";
+    
+    /* For groups, we want the list of group names from the wiki.d
+     * working directory */
+
+    $group_list = GetListOfWikiGroups();
+    $formatted_list = BuildGroupList($group_list);
+    return Keep($inline_code_begin.$formatted_list.$inline_code_end);
+}
+
+function GetListOfWikiGroups() {
+    $pagelist = ListPages('*.RecentChanges');
+    $grouplist = array();
+    foreach($pagelist as $page) {
+        list ($group, $name) = explode('.',$page);
+        if (PageExists("$group.$group")) {
+            $grouplist[]= "$group(.$group)";
+        } elseif (PageExists("$group.HomePage")) {
+            $grouplist[]= "$group(.HomePage)";
+        }
+    }
+    sort($grouplist);
+    return $grouplist;
+}
+
+function BuildGroupList($grouplist) {
+    $out = '';
+    foreach($grouplist as $grouppage) {
+        $out .= '<li>';
+        $out .= MakeLink($pagename,$grouppage);
+        $out .= '</li>';
+    }
+    return $out;
+}
+
+/* The following isn't working the way I want it to. Instead of
+ * putting the pagelist inside this, it's outside, so the group
+ * dropdowns don't work. */
+Markup("bgroupbegin",">links","/\\(:bgroupbegin (\\w+):\\)/e",
+       "Keep('<li class=\"dropdown\"><a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">$1<b class=\"caret\"></b></a><ul class=\"dropdown-menu\">')");
+Markup("bgroupend",">links","/\\(:bgroupend:\\)/",
+       Keep('</ul></li>'));
